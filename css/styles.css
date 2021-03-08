@@ -1,0 +1,68 @@
+/*Палитра
+цвет теекста заголовка - #FFFFFF;
+цвет теекста подзаголовков - #212121;
+цвет теекста - #757575;
+текст силки при наведении - #2196F3;
+текст в подвале - #FFFFFF; rgba(255, 255, 255, 0.6);
+акцент -  #2196F3;
+*/
+
+/* Главная */
+body {
+    background: #FFFFFF;
+}
+.list{
+    list-style: none;
+}
+
+
+/* Верхняя линия */
+.logo{
+    color: #212121;
+}
+.logo-web{
+    color: #2196F3;
+}
+
+/*стили nav*/
+.menu .link{
+    color: #212121;
+}
+.contact .link{
+    color: #757575;
+}
+.menu .link:hover,
+.menu .link:focus,
+.menu .link:active,
+.contact .link:hover,
+.contact .link:focus,
+.contact .link:active {
+    color: #2196F3;
+}
+
+
+
+
+
+
+
+
+/* Подвал */
+.footer{
+    background: #2F303A;
+}
+.logo-footer{
+    color: #FFFFFF;
+}
+.adress{
+    color: #FFFFFF;
+}
+
+.contact-footer .link{
+    color: rgba(255, 255, 255, 0.6);
+}
+.contact-footer .link:hover,
+.contact-footer .link:focus,
+.contact-footer .link:active {
+    color: #2196F3;
+}
