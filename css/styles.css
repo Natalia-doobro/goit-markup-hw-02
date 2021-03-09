@@ -6,63 +6,126 @@
 текст в подвале - #FFFFFF; rgba(255, 255, 255, 0.6);
 акцент -  #2196F3;
 */
-
+:root {
+  --logo-color: #212121;
+  --logo-web-color: #2196f3;
+  --link-color: #212121;
+  --current-color: #2196f3;
+  --hover-active-focus-color: #2196f3;
+  --title-color: #212121;
+  --text-color: #757575;
+  --hero-title-color: #ffffff;
+  --footer-color: #ffffff;
+  --footer-link-color: rgba(255, 255, 255, 0.6);
+  --adress-color: #ffffff;
+  --button-color: #ffffff;
+  --button-hover-color: #2196f3;
+  --filters-button-color: #212121;
+}
 /* Главная */
 body {
-    background: #FFFFFF;
+  background: #ffffff;
 }
-.list{
-    list-style: none;
+.list {
+  list-style: none;
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*Шапка сторінки (верхня лінія)*/
+/*Логотип*/
+.logo {
+  color: var(--logo-color);
+}
+.logo-web {
+  color: var(--logo-web-color);
+}
+/*Навигацыя*/
+.menu .menu-link {
+  color: var(--link-color);
+}
+.menu .menu-link.current {
+  color: var(--current-color);
+}
+.menu-link:active,
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--hover-active-focus-color);
+}
+/*Номер телефона и электронная почта*/
+.contact .contact-link {
+  color: var(--link-color);
+}
+.contact-link:active,
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--hover-active-focus-color);
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*Унікальний контент сторінки*/
+.section-title {
+  color: var(--title-color);
+}
+.section-text {
+  color: var(--text-color);
+}
+/*Шапка*/
+.hero {
+  background: #2f303a;
+}
+.hero-title {
+  color: var(--hero-title-color);
+}
+.button {
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--button-color);
+}
+.button:active,
+.button:hover,
+.button:focus {
+  background: #ffffff;
+  color: var(--button-hover-color);
+}
+/*Особливість*/
+
+/*Чим ми займаемося*/
+
+/*Наша команда*/
+.section-subtitle {
+  color: var(--title-color);
 }
 
-
-/* Верхняя линия */
-.logo{
-    color: #212121;
+/*---------------------------------------------------------------------------------------------------*/
+/*Підвал сторінки*/
+.footer {
+  background: #2f303a;
 }
-.logo-web{
-    color: #2196F3;
+/*Логотип*/
+.logo-footer {
+  color: var(--footer-color);
 }
-
-/*стили nav*/
-.menu .link{
-    color: #212121;
+/*Адрес, номер телефона и электронная почта*/
+.adress {
+  color: var(--adress-color);
 }
-.contact .link{
-    color: #757575;
+.contact-footer .contact-footer-link {
+  color: var(--footer-link-color);
 }
-.menu .link:hover,
-.menu .link:focus,
-.menu .link:active,
-.contact .link:hover,
-.contact .link:focus,
-.contact .link:active {
-    color: #2196F3;
+.contact-footer-link:active,
+.contact-footer-link:hover,
+.contact-footer-link:focus {
+  color: var(--hover-active-focus-color);
 }
-
-
-
-
-
-
-
-
-/* Подвал */
-.footer{
-    background: #2F303A;
+/*---------------------------------------------------------------------------------------------------*/
+/* кнопки фильтра */
+.filters-button {
+  background: #f5f4fa;
+  border-radius: 4px;
+  color: var(--filters-button-color);
 }
-.logo-footer{
-    color: #FFFFFF;
-}
-.adress{
-    color: #FFFFFF;
-}
-
-.contact-footer .link{
-    color: rgba(255, 255, 255, 0.6);
-}
-.contact-footer .link:hover,
-.contact-footer .link:focus,
-.contact-footer .link:active {
-    color: #2196F3;
+.filters-button:active,
+.filters-button:hover,
+.filters-button:focus {
+  background: #2196f3;
+  color: var(--button-color);
 }
