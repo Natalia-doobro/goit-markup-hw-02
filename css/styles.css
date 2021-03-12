@@ -6,21 +6,14 @@
 текст в подвале - #FFFFFF; rgba(255, 255, 255, 0.6);
 акцент -  #2196F3;
 */
+
 :root {
-  --logo-color: #212121;
-  --logo-web-color: #2196f3;
-  --link-color: #212121;
-  --current-color: #2196f3;
-  --hover-active-focus-color: #2196f3;
-  --title-color: #212121;
   --text-color: #757575;
-  --hero-title-color: #ffffff;
-  --footer-color: #ffffff;
-  --footer-link-color: rgba(255, 255, 255, 0.6);
-  --adress-color: #ffffff;
-  --button-color: #ffffff;
-  --button-hover-color: #2196f3;
-  --filters-button-color: #212121;
+  --title-color: #212121;
+  --hover-color: #2196f3;
+  --dark-bg-color: #2f303a;
+  --dark-bg-text-color: #ffffff;
+  --button-color: #2196f3;
 }
 /* Главная */
 body {
@@ -35,73 +28,60 @@ body {
 /*---------------------------------------------------------------------------------------------------*/
 /*Шапка сторінки (верхня лінія)*/
 /*Логотип*/
-.logo {
-  color: var(--logo-color);
-  font-family: Raleway;
-
+.logo.link {
+  color: var(--title-color);
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  text-decoration: none;
 }
 .logo-web {
-  color: var(--logo-web-color);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  color: var(--hover-color);
 }
 /*Навигацыя*/
-.menu .menu-link {
-  color: var(--link-color);
+.link {
+  color: var(--text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.menu .menu-link.current {
-  color: var(--current-color);
+.menu.list .link {
+  --text-color: #212121;
 }
-.menu-link:active,
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--hover-active-focus-color);
+.menu .link.current {
+  color: var(--hover-color);
+}
+.link:active,
+.link:hover,
+.link:focus {
+  color: var(--hover-color);
 }
 /*Номер телефона и электронная почта*/
-.contact .contact-link {
-  color: var(--link-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-}
-.contact-link:active,
-.contact-link:hover,
-.contact-link:focus {
-  color: var(--hover-active-focus-color);
-}
+
 /*---------------------------------------------------------------------------------------------------*/
 /*Унікальний контент сторінки*/
 .section-title {
   color: var(--title-color);
   font-weight: 700;
-}
-.section > .section-title {
   font-size: 36px;
   line-height: 1.16;
+}
+.section > .section-title {
   text-align: center;
 }
 .section-text {
   color: var(--text-color);
+  font-weight: 400;
 }
 
 /*Шапка*/
 .hero {
-  background: #2f303a;
+  background: var(--dark-bg-color);
 }
 .hero-title {
-  color: var(--hero-title-color);
+  color: var(--dark-bg-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.37;
@@ -110,10 +90,11 @@ body {
   text-transform: uppercase;
 }
 .button {
-  background: #2196f3;
+  background: var(--button-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  color: var(--button-color);
+  color: var(--dark-bg-text-color);
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
@@ -121,21 +102,21 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 .button:active,
 .button:hover,
 .button:focus {
-  background: #ffffff;
-  color: var(--button-hover-color);
+  --button-color: #ffffff;
+  color: var(--hover-color);
 }
 /*Особливість*/
-.section-list-hobbies-specialty .section-title {
+.items-feature .section-title {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
-.section-list-hobbies-specialty .section-text {
-  font-weight: 400;
+.items-feature .section-text {
   font-size: 14px;
   line-height: 1.7;
 }
@@ -149,8 +130,7 @@ body {
   line-height: 1.35;
   text-align: center;
 }
-.section-list-team .section-text {
-  font-weight: 400;
+.items-team .section-text {
   font-size: 16px;
   line-height: 1.35;
   text-align: center;
@@ -159,67 +139,54 @@ body {
 /*---------------------------------------------------------------------------------------------------*/
 /*Підвал сторінки*/
 .footer {
-  background: #2f303a;
+  background: var(--dark-bg-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
 }
 /*Логотип*/
 .logo-footer {
-  color: var(--footer-color);
+  color: var(--dark-bg-text-color);
   font-family: Raleway, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  text-decoration: none;
 }
 /*Адрес, номер телефона и электронная почта*/
 .adress {
-  color: var(--adress-color);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  color: var(--dark-bg-text-color);
 }
-.contact-footer .contact-footer-link {
-  color: var(--footer-link-color);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  text-decoration: none;
+.contact-footer .link {
+  --text-color: rgba(255, 255, 255, 0.6);
 }
-.contact-footer-link:active,
-.contact-footer-link:hover,
-.contact-footer-link:focus {
-  color: var(--hover-active-focus-color);
-}
+
 /*---------------------------------------------------------------------------------------------------*/
 /* страница портфолио */
 /* кнопки фильтра */
 .filters-button {
   background: #f5f4fa;
   border-radius: 4px;
-  color: var(--filters-button-color);
+  color: var(--title-color);
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
+  cursor: pointer;
 }
 .filters-button:active,
 .filters-button:hover,
 .filters-button:focus {
-  background: #2196f3;
-  color: var(--button-color);
-}
-.list-project a {
-  text-decoration: none;
+  background: var(--button-color);
+  color: var(--dark-bg-text-color);
 }
 
-.list-project .section-title {
-  font-weight: 700;
+.items-project .section-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.list-project .section-text {
-  font-weight: 400;
+.items-project .section-text {
   font-size: 16px;
   line-height: 1.8;
 }
