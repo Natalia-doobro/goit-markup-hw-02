@@ -8,16 +8,18 @@
 */
 
 :root {
+  --body-color: #ffffff;
   --text-color: #757575;
   --title-color: #212121;
   --hover-color: #2196f3;
   --dark-bg-color: #2f303a;
   --dark-bg-text-color: #ffffff;
   --button-color: #2196f3;
+  --dark-dg-filters-color: #f5f4fa;
 }
 /* Главная */
 body {
-  background: #ffffff;
+  background: var(--body-color);
   color: var(--text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
@@ -145,26 +147,25 @@ body {
   line-height: 1.7;
 }
 /*Логотип*/
-.logo-footer {
+.footer .logo {
   color: var(--dark-bg-text-color);
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
 }
 /*Адрес, номер телефона и электронная почта*/
 .adress {
   color: var(--dark-bg-text-color);
+  font-style: normal;
 }
 .contact-footer .link {
   --text-color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
 /* страница портфолио */
 /* кнопки фильтра */
 .filters-button {
-  background: #f5f4fa;
+  background: var(--dark-dg-filters-color);
   border-radius: 4px;
   color: var(--title-color);
   font-family: inherit;
